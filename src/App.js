@@ -1,25 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+import Header from "./components/Header";
+import Clock from "./components/Clock";
 
+function App() {
+    return (
+        <div className="center">
+            <Header />
+            <Clock city="Manaus" utc={0} />
+            <Clock city="Brasília" utc={1} />
+            <Clock city="Tóquio" utc={13} />
+            <Clock city="Londres" utc={4} />
+        </div>
+    );
+}
+    
 export default App;
